@@ -18,7 +18,13 @@ class MY_Controller extends CI_Controller {
         parent::__construct();
     }
     
-    public function get_event_active() {
-        
+    public function get_event($event_name=NULL) {
+        //$this->load->model(array(''));
+        return FALSE;
     }
 }
+
+/**
+ * Filename : MY_Controller.php
+ * Location : /core/MY_Controller.php
+ */

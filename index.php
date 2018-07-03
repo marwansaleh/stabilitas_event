@@ -314,6 +314,20 @@ switch (ENVIRONMENT)
 
 	define('VIEWPATH', $view_folder.DIRECTORY_SEPARATOR);
 
+/* --------------------------------------------------------------------
+ * SET SPL Autoload function
+ * --------------------------------------------------------------------
+ */
+spl_autoload_register(function ($classname)
+{
+  if (strpos($classname, 'CI_') !== 0) {
+        $file = APPPATH . 'libraries/' . $classname . '.php';
+        if (file_exists($file) && is_file($file)) {
+            include_once($file);
+	}
+    }
+});
+
 /*
  * --------------------------------------------------------------------
  * LOAD THE BOOTSTRAP FILE

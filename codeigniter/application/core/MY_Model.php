@@ -255,5 +255,5 @@ class MY_Model extends CI_Model {
 
 /**
  * Filename : MY_Model.php
- * Location : /MY_Model.php
+ * Location : /core/MY_Model.php
  */

@@ -12,8 +12,21 @@
  * @author IT01
  */
 class Home extends MY_Controller {
-    public function index() {
-        $this->load->view('', $this->data);
+    
+    public function index($event_name=NULL) {
+        $event = $this->get_event($event_name);
         
+        if (!$event) {
+            $view_name = '';
+        } else {
+            $view_name = '';
+        }
+        
+        $this->load->view('_layout_main', $this->data);
     }
 }
+
+/**
+ * Filename : Home.php
+ * Location : /controllers/Home.php
+ */
